@@ -85,9 +85,9 @@ class SLICProcessor(object):
         if h + 1 >= self.image_height:
             h = self.image_height - 2
 
-        gradient = self.data[w + 1][h + 1][0] - self.data[w][h][0] + \
-                   self.data[w + 1][h + 1][1] - self.data[w][h][1] + \
-                   self.data[w + 1][h + 1][2] - self.data[w][h][2]
+        gradient = self.data[h + 1][w + 1][0] - self.data[h][w][0] + \
+                   self.data[h + 1][w + 1][1] - self.data[h][w][1] + \
+                   self.data[h + 1][w + 1][2] - self.data[h][w][2]
         return gradient
 
     def move_clusters(self):
